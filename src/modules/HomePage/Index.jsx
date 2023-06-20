@@ -1,12 +1,12 @@
 import React from 'react';
 import HomeAdvertisement from './components/HomeAdvertisement';
-import Cyberpunk2077Logo from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/svg/Cyberpunk_2077_logo 1_homeLogo.svg';
-import YouTube from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/img/desktop/youtube logo_youTube.png';
-import Vk from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/img/desktop/vk logo_vk.png';
-import Facebook from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/img/desktop/facebook-rect logo_facebook.png';
-import Twitter from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/img/desktop/Vector_twitter.png';
-import Twitch from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/img/desktop/Vector_twitch.png';
-import Instagram from 'D:/UsefulPrograms/landing-cyberpunk/src/assets/img/desktop/instagram-square logo_instagram.png';
+import Cyberpunk2077Logo from '../../assets/svg/Cyberpunk_2077_logo 1_homeLogo.svg';
+import YouTube from '../../assets/img/desktop/youtube logo_youTube.png';
+import Vk from '../../assets/img/desktop/vk logo_vk.png';
+import Facebook from '../../assets/img/desktop/facebook-rect logo_facebook.png';
+import Twitter from '../../assets/img/desktop/Vector_twitter.png';
+import Twitch from '../../assets/img/desktop/Vector_twitch.png';
+import Instagram from '../../assets/img/desktop/instagram-square logo_instagram.png';
 import './style/Index.css';
 
 const Index = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import MyButton from 'D:/UsefulPrograms/landing-cyberpunk/src/UI/Button/MyButton.jsx';
+import MyButton from '../../../UI/Button/MyButton.jsx';
 import '../style/HomeAdvertisement.css';
 
 const HomeAdvertisement = ({ style }) => {
