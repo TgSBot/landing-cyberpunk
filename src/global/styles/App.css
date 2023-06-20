@@ -1,0 +1,19 @@
+@import-normalize;
+@import url(./Fonts.css);
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Roboto, Archangelsk, sans-serif;
+	min-width: 100%;
+}

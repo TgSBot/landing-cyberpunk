@@ -1,0 +1,39 @@
+@import url(/src/global/styles/Fonts.css);
+
+.button {
+	background: #000000;
+	text-align: center;
+	width: 272px;
+	height: 78px;
+	gap: 10px
+}
+
+.strong {
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 40px;
+	color: #f8f200;
+}
+
+@media (max-width: 768px) {
+	.button {
+		width: 258px;
+		height: 69px;
+	}
+
+	.strong {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 410px) {
+	.button {
+		width: 244px;
+		height: 60px;
+	}
+
+	.strong {
+		font-size: 20px;
+	}
+}
