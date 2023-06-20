@@ -14,7 +14,7 @@ const Index = () => {
 		<div className='homePage'>
 			<div className='homePage__nav'>
 				<div className='homePage__nav_row'>
-					<a href='#'>
+					<a href='https://www.cyberpunk.net/us/en/'>
 						<img
 							className='homePage__logo'
 							src={Cyberpunk2077Logo}
@@ -24,32 +24,32 @@ const Index = () => {
 					<div className='homePage__links'>
 						<ul>
 							<li>
-								<a href='#'>
+								<a href='https://www.youtube.com/@CyberpunkGame'>
 									<img src={YouTube} alt='YouTube' />
 								</a>
 							</li>
 							<li>
-								<a href='#'>
+								<a href='https://vk.com/cyberpunkgame'>
 									<img src={Vk} alt='Vk' />
 								</a>
 							</li>
 							<li>
-								<a href='#'>
+								<a href='https://www.facebook.com/CDPROJEKTRED/'>
 									<img src={Facebook} alt='Facebook' />
 								</a>
 							</li>
 							<li>
-								<a href='#'>
+								<a href='https://twitter.com/CyberpunkGame'>
 									<img src={Twitter} alt='twitter' />
 								</a>
 							</li>
 							<li>
-								<a href='#'>
+								<a href='https://www.twitch.tv/directory/game/Cyberpunk%202077'>
 									<img src={Twitch} alt='Twitch' />
 								</a>
 							</li>
 							<li>
-								<a href='#'>
+								<a href='https://www.instagram.com/cyberpunkgame/'>
 									<img src={Instagram} alt='Instagram' />
 								</a>
 							</li>

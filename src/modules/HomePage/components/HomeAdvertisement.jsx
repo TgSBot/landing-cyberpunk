@@ -7,7 +7,12 @@ const HomeAdvertisement = ({ style }) => {
 		<div className='advertisement' style={style}>
 			<div className='advertisement__row'>
 				<h1>Доступно на всех платформах</h1>
-				<MyButton button={{ marginTop: 25 }}>Узнать больше</MyButton>
+				<MyButton
+					href={'https://www.cyberpunk.net/us/en/cyberpunk-2077'}
+					button={{ marginTop: 25 }}
+				>
+					Узнать больше
+				</MyButton>
 			</div>
 		</div>
 	);

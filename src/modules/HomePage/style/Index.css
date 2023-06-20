@@ -44,7 +44,7 @@
 .homePage__button_row {
   display: flex;
   width: 1280px;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 @media (max-width: 1366px) {
