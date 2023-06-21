@@ -1,11 +1,11 @@
 import React from 'react';
-import Index from '../modules/HomePage/Index.jsx';
+import HomePage from '../modules/HomePage/HomePage.jsx';
 import StoryGame from '../modules/StoryGame/StoryGame.jsx';
 
 const MainPage = () => {
 	return (
 		<div>
-			<Index />
+			<HomePage />
 			<StoryGame />
 		</div>
 	);

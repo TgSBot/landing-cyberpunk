@@ -7,7 +7,7 @@ import Facebook from '../../assets/img/desktop/facebook-rect logo_facebook.png';
 import Twitter from '../../assets/img/desktop/Vector_twitter.png';
 import Twitch from '../../assets/img/desktop/Vector_twitch.png';
 import Instagram from '../../assets/img/desktop/instagram-square logo_instagram.png';
-import './style/Index.css';
+import './style/HomePage.css';
 
 const Index = () => {
 	return (
