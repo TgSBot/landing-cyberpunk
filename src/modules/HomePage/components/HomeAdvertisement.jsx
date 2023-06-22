@@ -9,7 +9,7 @@ const HomeAdvertisement = ({ style }) => {
 				<h1>Доступно на всех платформах</h1>
 				<MyButton
 					href={'https://www.cyberpunk.net/us/en/cyberpunk-2077'}
-					button={{ marginTop: 25 }}
+					style={{ marginTop: 25 }}
 				>
 					Узнать больше
 				</MyButton>

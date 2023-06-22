@@ -13,7 +13,7 @@ const Index = () => {
 	return (
 		<div className='homePage'>
 			<div className='homePage__nav'>
-				<div className='homePage__nav_row'>
+				<header className='homePage__nav_row'>
 					<a href='https://www.cyberpunk.net/us/en/'>
 						<img
 							className='homePage__logo'
@@ -55,7 +55,7 @@ const Index = () => {
 							</li>
 						</ul>
 					</div>
-				</div>
+				</header>
 			</div>
 			<div className='homePage__button'>
 				<div className='homePage__button_row'>
