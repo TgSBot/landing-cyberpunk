@@ -1,5 +1,11 @@
 @font-face {
 	font-family: Roboto;
+	font-weight: 300;
+	src: url(/src/assets/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+	font-family: Roboto;
 	font-weight: 400;
 	src: url(/src/assets/fonts/Roboto-Regular.ttf);
 }
@@ -9,6 +15,7 @@
 	font-weight: 700;
 	src: url(/src/assets/fonts/Roboto-Bold.ttf);
 }
+
 
 @font-face {
 	font-family: Archangelsk;
