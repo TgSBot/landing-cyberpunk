@@ -1,0 +1,52 @@
+.input_text {
+  display: inline-block;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #777;
+  width: 460px;
+  margin-bottom: 35px;
+}
+
+.input_text::placeholder {
+  color: white;
+  font-size: 18px;
+  font-family: Robot;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.input_checkbox {
+  display: none;
+  margin-top: 10px;
+}
+
+.fake {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #777;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.fake::before {
+  content: url(/src/assets/svg/Check_checkbox.svg);
+  position: relative;
+  bottom: 3px;
+  display: block;
+  opacity: 0;
+}
+
+.input_checkbox:checked+.fake::before {
+  opacity: 1;
+}
+
+.input_checkbox_text {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: 15px;
+}
