@@ -1,67 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import classes from './MyInput.module.css';
 
-const MyInput = ({ ...props }) => {
-	const [selectedFiles, setSelectedFiles] = useState(null);
-	const [drag, setDrag] = useState(false);
-
-	function dragStartHandler(event) {
-		event.preventDefault();
-		setDrag(true);
-	}
-
-	function dragLeaveHandler(event) {
-		event.preventDefault();
-		setDrag(false);
-	}
-
-	function onDropHandler(event) {
-		event.preventDefault();
-		setSelectedFiles(...event.dataTransfer.files);
-		setDrag(false);
-	}
-
-	function handleSub(event) {
-		event.preventDefault();
-		setSelectedFiles(event.target.files[0]);
-	}
-
-	useEffect(() => {}, [selectedFiles]);
-
+const MyInput = ({ type, placeholder, innerRef, ...props }) => {
 	return (
 		<>
-			{drag ? (
-				<label
-					className={classes.dragAndDrop}
-					onDragStart={(event) => dragStartHandler(event)}
-					onDragLeave={(event) => dragLeaveHandler(event)}
-					onDragOver={(event) => dragStartHandler(event)}
-					onDrop={(event) => onDropHandler(event)}
-				>
-					<input type={'file'} onChange={handleSub} {...props} />
-					<p>Отпустите файл, что бы загрузить</p>
-				</label>
-			) : selectedFiles !== null ? (
-				<label
-					className={classes.dragAndDrop}
-					onDragStart={(event) => dragStartHandler(event)}
-					onDragLeave={(event) => dragLeaveHandler(event)}
-					onDragOver={(event) => dragStartHandler(event)}
-				>
-					<input type={'file'} onChange={handleSub} {...props} />
-					<span>{selectedFiles.name}</span>
+			{type === 'checkbox' ? (
+				<label className={classes.label_inputCheckbox}>
+					<input
+						type='checkbox'
+						className={classes.input_checkbox}
+						ref={innerRef}
+						{...props}
+					/>
+					<span className={classes.fake}></span>
+					<span className={classes.input_checkbox_text}>
+						Согласен на обработку персональных данных
+					</span>
 				</label>
 			) : (
-				<label
-					className={classes.dragAndDrop}
-					onDragStart={(event) => dragStartHandler(event)}
-					onDragLeave={(event) => dragLeaveHandler(event)}
-					onDragOver={(event) => dragStartHandler(event)}
-				>
-					<input type={'file'} onChange={handleSub} {...props} />
-					<h5>Прикрепите скриншот</h5>
-					<p>.png/ .jpg/ .pdf</p>
-				</label>
+				<input
+					type='text'
+					ref={innerRef}
+					className={classes.input_text}
+					placeholder={placeholder}
+					{...props}
+				/>
 			)}
 		</>
 	);

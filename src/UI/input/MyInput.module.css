@@ -3,6 +3,7 @@
   padding-bottom: 13px;
   border-bottom: 1px solid #777;
   width: 460px;
+  margin-bottom: 35px;
 }
 
 .input_text::placeholder {
@@ -10,30 +11,42 @@
   font-size: 18px;
   font-family: Robot;
   font-weight: 300;
+  opacity: 0.9;
 }
 
-input[type=file] {
+.input_checkbox {
   display: none;
+  margin-top: 10px;
 }
 
-.dragAndDrop {
-  width: 460px;
-  height: 120px;
-  display: flex;
-  border: 1px dashed #777;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
+.fake {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #777;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
 }
 
-span {
+.fake::before {
+  content: url(/src/assets/svg/Check_checkbox.svg);
+  position: relative;
+  bottom: 3px;
+  display: block;
+  opacity: 0;
+}
+
+.input_checkbox:checked+.fake::before {
+  opacity: 1;
+}
+
+.input_checkbox_text {
+  text-decoration: none;
   color: #FFF;
-  font-size: 18px;
+  font-size: 12px;
   font-family: Roboto;
   font-weight: 300;
-  text-decoration-line: underline;
   display: inline-block;
-  word-break: break-all;
-  width: fit-content;
+  margin-top: 15px;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import DragAndDrop from '../../UI/DragAndDrop/DragAndDrop';
 import Form from './components/Form';
 import './styles/Stock.css';
 
