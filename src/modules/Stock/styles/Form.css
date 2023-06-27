@@ -1,0 +1,58 @@
+@import url(/src/global/styles/ResetStyle.css);
+
+.input_text {
+  display: inline-block;
+  width: 460px;
+  border-bottom: 1px solid #777;
+  padding-bottom: 13px;
+  margin-bottom: 15px;
+  color: white;
+  font-family: Roboto;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.input_text::placeholder {
+  color: #FFF;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.check {
+  padding-left: 20px;
+  color: #FFF;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.input_checkbox {
+  position: absolute;
+  display: none;
+}
+
+.check_box {
+  position: absolute;
+  margin-left: -20px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #777;
+}
+
+.input_checkbox:checked+.check_box {
+  background-image: url(/src/assets/svg/Check_checkbox.svg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_error {
+  display: inline-block;
+  color: white;
+  position: relative;
+  bottom: 25px;
+}
