@@ -46,9 +46,11 @@
 }
 
 .form {
+  width: fit-content;
   display: flex;
   flex-direction: column;
 }
+
 
 .input_error {
   display: inline-block;

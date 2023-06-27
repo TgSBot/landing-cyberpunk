@@ -1,0 +1,26 @@
+input[type=file] {
+  display: none;
+}
+
+.dragAndDrop {
+  width: 460px;
+  height: 120px;
+  display: flex;
+  border: 1px dashed #777;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+span {
+  color: #FFF;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 300;
+  text-decoration-line: underline;
+  display: inline-block;
+  word-break: break-all;
+  width: fit-content;
+}

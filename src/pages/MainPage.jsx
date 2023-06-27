@@ -5,11 +5,11 @@ import StoryGame from '../modules/StoryGame/StoryGame.jsx';
 
 const MainPage = () => {
 	return (
-		<div>
+		<>
 			<HomePage />
 			<StoryGame />
 			<Stock />
-		</div>
+		</>
 	);
 };
 

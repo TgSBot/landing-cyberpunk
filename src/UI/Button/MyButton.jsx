@@ -1,9 +1,13 @@
 import React from 'react';
 import classes from './MyButton.module.css';
 
-const MyButton = ({ children, ...props }) => {
+const MyButton = ({ children, disabled, ...props }) => {
 	return (
-		<button className={[classes.button, classes.strong].join(' ')} {...props}>
+		<button
+			className={[classes.button, classes.strong].join(' ')}
+			disabled={disabled}
+			{...props}
+		>
 			{children}
 		</button>
 	);
