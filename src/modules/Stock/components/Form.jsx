@@ -1,143 +1,130 @@
-import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import DragAndDrop from '../../../components/DragAndDrop/DragAndDrop.jsx';
+import { formSlice } from '../../../store/reducers/Form.js';
 import MyButton from '../../../UI/Button/MyButton';
-import MyInput from '../../../UI/input/MyInput';
-import DragAndDrop from '../../../UI/DragAndDrop/DragAndDrop';
 import '../styles/Form.css';
-import { useSelector } from 'react-redux';
-import { isEmpty } from '../../../context/EmptyString';
 
 const Form = () => {
-	const {
-		handleSubmit,
-		formState: { errors },
-		control,
-		setValue,
-		reset,
-	} = useForm({ mode: 'onSubmit' });
-	const { fileName } = useSelector((state) => state.formReducer);
+	const { firstName, email, checkbox, fileName } = useSelector(
+		(state) => state.formReducer
+	);
+	const { changeFirstName, changeEmail, changeCheckbox } = formSlice.actions;
+	const dispatch = useDispatch();
+	const [firstNameDirty, setfirstNameDirty] = useState(false);
+	const [emailDirty, setEmailDirty] = useState(false);
+	const [firstNameError, setFirstNameError] = useState(
+		'Имя не может быть пустым'
+	);
+	const [emailError, setEmailError] = useState('Email не может быть пустым');
+	const [formValid, setFormValid] = useState(false);
 
-	function onSubmit(data) {
-		alert(JSON.stringify(data));
-		reset();
-	}
+	const blurHandler = (event) => {
+		switch (event.target.name) {
+			case 'firstName':
+				setfirstNameDirty(true);
+				break;
+			case 'email':
+				setEmailDirty(true);
+				break;
+			default:
+				return '';
+		}
+	};
+
+	useEffect(() => {
+		if (firstNameError || emailError) {
+			setFormValid(false);
+		} else {
+			setFormValid(true);
+		}
+	}, [firstNameError, emailError]);
+
+	useEffect(() => {
+		if (
+			firstName === '' ||
+			email === '' ||
+			fileName === '' ||
+			checkbox === false
+		) {
+			setFormValid(false);
+		} else {
+			setFormValid(true);
+		}
+	}, [firstName, email, fileName, checkbox]);
+
+	const firstNameHandler = (event) => {
+		dispatch(changeFirstName(event.target.value));
+		if (event.target.value.length < 1) {
+			setFirstNameError('Напишите своё имя');
+		} else {
+			setFirstNameError('');
+		}
+	};
+
+	const emailHandler = (event) => {
+		dispatch(changeEmail(event.target.value));
+		const re = /@/;
+		if (!re.test(String(event.target.value).toLowerCase())) {
+			setEmailError('Некоректный email');
+		} else {
+			setEmailError('');
+		}
+	};
+
 	return (
 		<>
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<Controller
+			<form action='#' className='form'>
+				<input
+					type='text'
 					name='firstName'
-					control={control}
-					rules={{
-						required: 'Поле обязательно для заполнения',
-						minLength: {
-							value: 3,
-							message: 'Минимальное колличество символов 3',
-						},
-					}}
-					render={({ field: { onChange, onBlur, value, ref } }) => (
-						<MyInput
-							placeholder={'Как тебя зовут?'}
-							onChangeCapture={onChange}
-							onBlur={onBlur}
-							selected={value}
-							innerRef={ref}
-						/>
-					)}
+					onBlur={(event) => blurHandler(event)}
+					placeholder={'Как тебя зовут?'}
+					className='input_text'
+					autoComplete='off'
+					onChange={(event) => firstNameHandler(event)}
+					value={firstName}
 				/>
-				{errors?.firstName && (
-					<span className='error_validation'>
-						{errors?.firstName.message || 'Error!'}
-					</span>
+				{firstNameDirty && firstNameError && (
+					<span className='input_error'>{firstNameError}</span>
 				)}
-				<Controller
+				<input
+					type='text'
 					name='email'
-					control={control}
-					rules={{
-						required: 'Поле обязательно для заполнения',
-						pattern: /@/,
-					}}
-					render={({ field: { onChange, onBlur, value, ref } }) => (
-						<MyInput
-							placeholder={'Как тебя зовут?'}
-							onChangeCapture={onChange}
-							onBlur={onBlur}
-							selected={value}
-							innerRef={ref}
-						/>
-					)}
+					autoComplete='off'
+					onBlur={(event) => blurHandler(event)}
+					placeholder={'Твой e-mail'}
+					className='input_text'
+					onChange={(event) => emailHandler(event)}
+					value={email}
 				/>
-				{errors?.email && (
-					<span className='error_validation'>
-						{errors?.email.message || 'Error!'}
-					</span>
+				{emailDirty && emailError && (
+					<span className='input_error'>{emailError}</span>
 				)}
-				<Controller
-					name='img'
-					control={control}
-					rules={{
-						required: 'Поле обязательно для заполнения',
+				<DragAndDrop />
+				<MyButton
+					type={'submit'}
+					disabled={!formValid}
+					style={{
+						width: 192,
+						height: 59,
+						background: '#F8F200',
+						color: 'black',
+						marginBottom: 15,
 					}}
-					render={({ field: { onChange, onBlur, value, ref } }) => (
-						<DragAndDrop
-							onChangeCapture={onChange}
-							onBlur={onBlur}
-							selected={value}
-							innerRef={ref}
-						/>
-					)}
-				/>
-				{errors?.img && (
-					<span className='error_validation'>
-						{errors?.img.message || 'Error!'}
-					</span>
-				)}
-				{isEmpty(fileName) === true ? (
-					<MyButton
-						type='submit'
-						disabled={true}
-						onClick={() => setValue('img', `${fileName}`)}
-						style={{
-							background: 'yellow',
-							color: 'black',
-							height: 59,
-							width: 192,
-							fontSize: 18,
-						}}
-					>
-						Отправить
-					</MyButton>
-				) : (
-					<MyButton
-						type='submit'
-						onClick={() => setValue('img', `${fileName}`)}
-						style={{
-							background: 'yellow',
-							color: 'black',
-							height: 59,
-							width: 192,
-							fontSize: 18,
-						}}
-					>
-						Отправить
-					</MyButton>
-				)}
-
-				<Controller
-					name='Confirmation'
-					control={control}
-					rules={{
-						required: true,
-					}}
-					render={({ field: { onChange, onBlur, value, ref } }) => (
-						<MyInput
-							type={'checkbox'}
-							onChangeCapture={onChange}
-							onBlur={onBlur}
-							selected={value}
-							innerRef={ref}
-						/>
-					)}
-				/>
+				>
+					Отправить
+				</MyButton>
+				<label className={'check'}>
+					<input
+						type={'checkbox'}
+						onChange={(event) => dispatch(changeCheckbox(event.target.checked))}
+						className={'input_checkbox'}
+						checked={checkbox}
+					/>
+					<span className={'check_box'}></span>
+					Согласен на обработку персональных данных
+				</label>
 			</form>
 		</>
 	);
