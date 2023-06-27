@@ -1,6 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers } from 'redux';
 import formReducer from './reducers/Form';
+const { combineReducers, configureStore } = require('@reduxjs/toolkit');
 
 const rootReducer = combineReducers({
 	formReducer,
