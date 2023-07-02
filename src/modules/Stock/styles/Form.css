@@ -1,11 +1,22 @@
 @import url(/src/global/styles/ResetStyle.css);
 
+.form-base {
+  display: flex;
+  margin: 65px 35px 70px 0px;
+  height: fit-content;
+}
+
+.form-row {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
 .input_text {
   display: inline-block;
   width: 460px;
   border-bottom: 1px solid #777;
   padding-bottom: 13px;
-  margin-bottom: 15px;
   color: white;
   font-family: Roboto;
   display: inline-block;
@@ -57,4 +68,37 @@
   color: white;
   position: relative;
   bottom: 25px;
+  color: yellow;
+}
+
+@media (max-width: 1366px) {
+  .form {
+    margin: 65px 32px 70px 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form {
+    margin: 65px 18px 70px 0px;
+  }
+}
+
+@media (max-width: 496px) {
+  .input_text {
+    width: 380px;
+  }
+}
+
+@media (max-width: 440px) {
+  .input_text {
+    width: 296px;
+  }
+
+  .input_text::placeholder {
+    font-size: 16px;
+  }
+
+  .form {
+    margin: 70px 0px 0px 0px;
+  }
 }

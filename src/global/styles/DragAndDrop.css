@@ -43,3 +43,23 @@ input[type=file] {
   overflow: hidden;
   word-break: break-all;
 }
+
+@media (max-width: 496px) {
+  .drop-area {
+    width: 380px;
+  }
+}
+
+@media (max-width: 440px) {
+  .drop-area {
+    width: 296px;
+  }
+
+  .drop-area_h5 {
+    font-size: 16px;
+  }
+
+  .not-empty-file {
+    font-size: 16px;
+  }
+}

@@ -73,8 +73,8 @@ const Form = () => {
 	};
 
 	return (
-		<>
-			<form action='#' className='form'>
+		<div className='form-base'>
+			<form action='#' className='form-row'>
 				<input
 					type='text'
 					name='firstName'
@@ -126,7 +126,7 @@ const Form = () => {
 					Согласен на обработку персональных данных
 				</label>
 			</form>
-		</>
+		</div>
 	);
 };
 
