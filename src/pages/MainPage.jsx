@@ -2,6 +2,7 @@ import React from 'react';
 import HomePage from '../modules/HomePage/HomePage.jsx';
 import Stock from '../modules/Stock/Stock.jsx';
 import StoryGame from '../modules/StoryGame/StoryGame.jsx';
+import TogetherHP from '../modules/TogetherHP/TogetherHP.jsx';
 
 const MainPage = () => {
 	return (
@@ -9,6 +10,7 @@ const MainPage = () => {
 			<HomePage />
 			<StoryGame />
 			<Stock />
+			<TogetherHP />
 		</>
 	);
 };
