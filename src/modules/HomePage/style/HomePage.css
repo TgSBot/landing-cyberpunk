@@ -8,7 +8,7 @@
   background: url(../../../assets/img/desktop/11_home_1.webp) no-repeat center;
   animation: back 7s infinite alternate;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-delay: 0.5s;
+  animation-delay: 2s;
 }
 
 @keyframes back {
@@ -17,7 +17,7 @@
   }
 
   50% {
-    background: url(/src/assets/img/desktop/Untitled-1-2_home_3.webp) no-repeat center;
+    background: url(/src/assets/img/desktop/11_home_2.webp) no-repeat center;
   }
 
   100% {
