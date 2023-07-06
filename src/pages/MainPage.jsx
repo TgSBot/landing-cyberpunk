@@ -1,4 +1,5 @@
 import React from 'react';
+import BuyGame from '../modules/BuyGame/BuyGame.jsx';
 import HomePage from '../modules/HomePage/HomePage.jsx';
 import Stock from '../modules/Stock/Stock.jsx';
 import StoryGame from '../modules/StoryGame/StoryGame.jsx';
@@ -11,6 +12,7 @@ const MainPage = () => {
 			<StoryGame />
 			<Stock />
 			<TogetherHP />
+			<BuyGame />
 		</>
 	);
 };
