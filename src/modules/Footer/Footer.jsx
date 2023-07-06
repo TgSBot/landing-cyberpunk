@@ -16,10 +16,14 @@ const Footer = () => {
 						</div>
 						<div className='footer__row_regulation'>
 							<h4 className='footer__row_regulation_h4'>
-								<a href='#'>Лицензия</a>
+								<a href='https://regulations.cdprojektred.com/en/user_agreement'>
+									Лицензия
+								</a>
 							</h4>
 							<h4>
-								<a href='#'>Политика конфиденциальности</a>
+								<a href='https://regulations.cdprojektred.com/en/privacy_policy'>
+									Политика конфиденциальности
+								</a>
 							</h4>
 						</div>
 					</div>
@@ -42,10 +46,14 @@ const Footer = () => {
 						<div className='footer__row_regulation'>
 							<div className='footer__regulation_text'>
 								<h4 className='footer__row_regulation_h4'>
-									<a href='#'>Лицензия</a>
+									<a href='https://regulations.cdprojektred.com/en/user_agreement'>
+										Лицензия
+									</a>
 								</h4>
 								<h4>
-									<a href='#'>Политика конфиденциальности</a>
+									<a href='https://regulations.cdprojektred.com/en/privacy_policy'>
+										Политика конфиденциальности
+									</a>
 								</h4>
 							</div>
 						</div>
