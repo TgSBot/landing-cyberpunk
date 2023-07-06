@@ -78,8 +78,7 @@
 .bottom-decoration {
 	background: url(/src/assets/img/desktop/22\ 2_decorate_bottom.png) bottom;
 	position: relative;
-	bottom: 1px;
-	height: 70px;
+	height: 4.3rem;
 }
 
 @media (max-width: 1366px) {
