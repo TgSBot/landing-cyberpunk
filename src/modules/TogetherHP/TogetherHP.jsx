@@ -1,7 +1,7 @@
 import React from 'react';
 import MyButton from '../../UI/Button/MyButton';
 import windowWidth from '../../context/WindowWidth';
-import HP from '../../assets/img/desktop/c06611743 1_Screen.png';
+import HP from '../../assets/img/desktop/c06611743 1_Screen.svg';
 import HPLogo from '../../assets/svg/hp-2 logo_hp.svg';
 import Vector from '../../assets/svg/Group 235_vector.svg';
 import CyberpunkLogo from '../../assets/svg/Cyberpunk_2077_logo 1_homeLogo.svg';
