@@ -68,12 +68,17 @@
 }
 
 .above-decoration {
-	background: url(/src/assets/svg/22\ 1_decorate_above.svg) top no-repeat;
+	background: url(/src/assets/img/desktop/22\ 1_decorate_above.png) top;
+	position: relative;
+	top: 1px;
 	height: 70px;
+
 }
 
 .bottom-decoration {
-	background: url(/src/assets/svg/22\ 2_decorate_bottom.svg) bottom no-repeat;
+	background: url(/src/assets/img/desktop/22\ 2_decorate_bottom.png) bottom;
+	position: relative;
+	bottom: 1px;
 	height: 70px;
 }
 
