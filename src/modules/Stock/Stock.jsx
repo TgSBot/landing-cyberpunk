@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import './styles/Stock.css';
-import { windowWidth } from '../../context/WindowWidth';
+import windowWidth from '../../context/WindowWidth';
 import consoles from '../../assets/img/desktop/Group 217_xBox=Ps.png';
 import stock from '../../assets/svg/Group 215_stock.svg';
 import consolesTablet from '../../assets/img/tablet/Group 244_xBxo=PS.png';

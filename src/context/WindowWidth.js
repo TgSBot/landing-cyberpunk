@@ -1,1 +1,3 @@
-export const windowWidth = window.innerWidth;
+const windowWidth = window.innerWidth;
+
+export default windowWidth;

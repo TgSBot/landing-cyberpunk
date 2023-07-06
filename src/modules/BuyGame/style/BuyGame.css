@@ -1,0 +1,243 @@
+/* @import url(/src/global/styles/ResetStyle.css); */
+
+.buyGame {
+  width: 100%;
+  height: fit-content;
+  background-color: black;
+  color: white;
+}
+
+.buyGame__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.buyGame__row_img {
+  width: 50%;
+}
+
+.buyGame__main {}
+
+.buyGame__main_row {
+  margin: 70px 0px 70px 32px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.buyGame__main_title {
+  color: #FFF;
+  font-family: Archangelsk;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+  width: 624px;
+  margin-bottom: 25px;
+}
+
+.buyGame__main_includedPackage {
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 70px;
+}
+
+.buyGame__main_includedPackage h3 {
+  color: #52BEDC;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.buyGame__main_includedPackage_ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.buyGame__main_includedPackage_li {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  margin-bottom: 26px;
+}
+
+.buyGame__main_includedPackage_li:last-child {
+  margin-bottom: 0px;
+}
+
+.buyGame__main_includedPackage_li::before {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+#Case::before {
+  content: '';
+  background: url(/src/assets/icons/disk_case.png) no-repeat center;
+  background-size: 32px 32px;
+}
+
+#PCVersion::before {
+  content: '';
+  background: url(/src/assets/icons/Group_browse.png) no-repeat center;
+  background-size: 32px 32px;
+}
+
+#Guide::before {
+  content: '';
+  background: url(/src/assets/icons/collections_img.png) no-repeat center;
+  background-size: 32px 32px;
+}
+
+.buyGame__main_platform {
+  width: fit-content;
+
+}
+
+.buyGame__main_platform h3 {
+  color: #52BEDC;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: inline-block;
+  margin-bottom: 25.14px;
+}
+
+.buyGame__main_platform_placesPlay {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.buyGame__main_platform_ul {
+  margin-right: 79px;
+  height: 134px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#PC {
+  width: 62px;
+  height: 35.18px;
+}
+
+#Stadia {
+  width: 58px;
+  height: 50.26px;
+}
+
+#Xbox {
+  width: 178px;
+  height: 35.18px;
+}
+
+#PS4 {
+  width: 168px;
+  height: 35px;
+}
+
+@media (max-width: 1330px) {
+  .buyGame__row_img {
+    width: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .buyGame__row_img {
+    width: 332px;
+    height: auto;
+  }
+}
+
+@media (max-width: 990px) {
+  .buyGame__row {
+    flex-direction: column;
+  }
+
+  .buyGame__row_img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .buyGame__main_row {
+    margin: 40px 12px 70px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .buyGame__main_title {
+    width: 460px;
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 474px) {
+  .buyGame__main_title {
+    width: 378px;
+    font-size: 38px;
+  }
+
+  .buyGame__main_includedPackage_li::before {
+    width: 26px;
+    height: 26px;
+    margin-right: 18px;
+  }
+
+  #PC {
+    width: 62px;
+    height: 35.18px;
+  }
+
+  #Stadia {
+    width: 58px;
+    height: 50px;
+  }
+
+  #xboxOne {
+    width: 178px;
+    height: 35.18px;
+  }
+
+  #PS4 {
+    width: 168.62px;
+    height: 35.32px;
+  }
+}
+
+@media (max-width: 390px) {
+  .buyGame__main_title {
+    width: 296px;
+    font-size: 30px;
+  }
+
+  .buyGame__main_includedPackage h3 {
+    font-size: 20px;
+  }
+
+  .buyGame__main_includedPackage_li {
+    font-size: 16px;
+  }
+
+  .buyGame__main_platform h3 {
+    font-size: 20px;
+  }
+
+  .buyGame__main_platform_ul {
+    height: 126.25px;
+    margin-right: 56px;
+  }
+}
